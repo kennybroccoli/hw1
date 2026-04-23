@@ -213,6 +213,11 @@ JOIN studios ON movies.studio_id = studios.id;
 -- ***TODO!***
 -- The SQL statement for the cast output goes here.
 
+SELECT movies.title, actors.name, roles.character_name
+FROM roles
+JOIN movies ON roles.movie_id = movies.id
+JOIN actors ON roles.actor_id = actors.id
+
 -- Example output:
 -- Top Cast
 -- ========
