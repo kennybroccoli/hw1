@@ -216,7 +216,7 @@ JOIN studios ON movies.studio_id = studios.id;
 SELECT movies.title, actors.name, roles.character_name
 FROM roles
 JOIN movies ON roles.movie_id = movies.id
-JOIN actors ON roles.actor_id = actors.id
+JOIN actors ON roles.actor_id = actors.id;
 
 -- Example output:
 -- Top Cast
@@ -245,6 +245,11 @@ JOIN actors ON roles.actor_id = actors.id
 
 -- ***TODO!***
 -- The SQL statement for the represented actor(s) output goes here.
+
+SELECT actors.name
+FROM actors
+JOIN agents ON actors.agent_id = agents.id
+WHERE agents.name = 'Test Agent';
 
 -- Example output:
 -- Represented by agent
