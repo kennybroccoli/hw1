@@ -193,6 +193,10 @@ WHERE name = 'Christian Bale';
 -- ***TODO!***
 -- The SQL statement for the movies output goes here.
 
+SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.name
+FROM movies
+JOIN studios ON movies.studio_id = studios.id;
+
 -- Example output:
 -- Movies
 -- ======
